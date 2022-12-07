@@ -20,10 +20,11 @@ export class PageComponent implements OnInit {
     
 
   }
-  getOKay(){
-    console.log('entrouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu')
-    this.service.getAll().subscribe((data) =>(this.info = data));
-  }
+  
+  //getOKay(){
+  //  console.log('entrouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu')
+  //  this.service.getAll().subscribe((data) =>(this.info = data));
+  //}
   
  
 
