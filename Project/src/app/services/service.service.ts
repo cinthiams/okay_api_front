@@ -6,18 +6,21 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ServiceService {
   private apiUrl = 'https://localhost:2222/ok'
   constructor( private http: HttpClient) { }
   
-  
+ 
+  response!:any;
+  a!:any;
   getAll(): Observable<any[]>{
-    
+    //this.response = this.http.get<any[]>(`http://localhost:2222/api/ok`)
+    //this.a = JSON.parse(JSON.stringify(this.response))
+    //console.log(this.a.Produto,'----------------------------------------------')
     return this.http.get<any[]>(`http://localhost:2222/api/ok`)
-    
-    //this.http.get<any>('http://localhost:2222/api/ok').subscribe(data =>{
-    //this.palavra = data;
-
+ 
   }
+
   
 }
