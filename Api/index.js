@@ -22,14 +22,15 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
 
   // Pass to next layer of middleware
-  return next();
+  next();
 });
 
 server.use(express.json())
 
 server.get('/api/ok',cors(),(req, res) => {
   console.log("acessou ------------------------------------------");
-  return res.json({Palavra : 'okay'})
+  const ok = ['okay']
+  return res.json(ok)
 })
 
 server.listen(2222);

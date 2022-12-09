@@ -6,27 +6,25 @@ import { ServiceService } from '../services/service.service';
   styleUrls: ['./page.component.css']
 })
 export class PageComponent implements OnInit {
-  info!: any;
 
-  public lista: String = 'e';
+  palavra!: any;
 
-  constructor( private service:ServiceService) {}
- 
-  
-  ngOnInit(): void {
-    console.log('entrouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu')
 
-  
-    
 
+
+
+  constructor(private Service: ServiceService) { }
+
+
+
+
+  consulta() {
+    this.Service.getAll().subscribe(resultado => this.palavra = resultado);
   }
-  
-  //getOKay(){
-  //  console.log('entrouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu')
-  //  this.service.getAll().subscribe((data) =>(this.info = data));
-  //}
-  
- 
 
+  ngOnInit(): void {
+    
+  
+  }
 
 }
